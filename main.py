@@ -12,9 +12,7 @@ time.sleep(1)
 button_ok = driver.find_element_by_class_name("UIButton--hero")
 webdriver.ActionChains(driver).click(button_ok).perform()
 time.sleep(0.05)
-fr_elements = driver.find_elements_by_class_name("lang-fr")
 de_elements = driver.find_elements_by_class_name("lang-de")
-print(fr_elements)
 for e in de_elements:
     webdriver.ActionChains(driver).click(e).perform()
     fr_text = words[e.text]
